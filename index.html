@@ -11,18 +11,35 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <!-- adding google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- end of google font link -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              // colors for the ummary section
+              // background colors
+              slateBlue: "hsl(252, 100%, 67%)",
+              royalBlue: "hsl(241, 81%, 54%)",
+              // circle
+              // circle bg
+              violetBlue: "hsla(256, 72%, 46%, 1)",
+              persianBlue: "hsla(241, 72%, 46%, 0)",
+              // circle text
+              white: "hsl(0, 0%, 100%)",
+              // summary text colors
               reactionText: "hsl(0, 100%, 67%)",
               memoryText: "hsl(39, 100%, 56%)",
               verbalText: "hsl(166, 100%, 37%)",
               visualText: "hsl(234, 85%, 45%)",
-              // Bg colors
+              // summary Bg colors
               reactionBg: "hsla(0, 100%, 67%, .1)",
               memoryBg: "hsl(39, 100%, 56%, .1)",
               verbalBg: "hsl(166, 100%, 37%, .1)",
@@ -47,10 +64,14 @@
   </head>
   <body>
     <main>
-      <div class="w-full bg-lightRed rounded-b-3xl text-center">
+      <div
+        class="w-full bg-gradient-to-b from-slateBlue to-royalBlue rounded-b-3xl text-center"
+      >
         <h1 class="p-4">Your Result</h1>
-        <div class="w-24 h-24 flex flex-col m-auto justify-center rounded-full bg-blue-400">
-          <span class="text-4xl font-bold">76</span>
+        <div
+          class="w-32 h-32 flex flex-col m-auto justify-center rounded-full bg-gradient-to-b from-violetBlue to-persianBlue"
+        >
+          <span class="text-5xl text-white font-bold">76</span>
           <span>of 100</span>
         </div>
         <div>
@@ -61,10 +82,12 @@
         </div>
       </div>
       <div class="p-4">
-        <h3 class="p-2 pb-4 font-bold">Summary</h3>
+        <h3 class="p-2 font-bold">Summary</h3>
         <div>
-          <div class="flex w-full bg-reactionBg rounded-xl p-3 justify-between">
-            <div class="flex ">
+          <div
+            class="flex w-full bg-reactionBg rounded-xl my-4 p-3 justify-between"
+          >
+            <div class="flex">
               <div class="pr-3">
                 <img
                   src="assets/images/icon-reaction.svg"
@@ -72,6 +95,48 @@
                 />
               </div>
               <p class="font-bold text-reactionText">Reaction</p>
+            </div>
+            <div class="font-bold">
+              <p><span>80</span> / 100</p>
+            </div>
+          </div>
+          <!--end reacion summary-->
+          <div
+            class="flex w-full bg-memoryBg rounded-xl my-4 p-3 justify-between"
+          >
+            <div class="flex">
+              <div class="pr-3">
+                <img src="assets/images/icon-memory.svg" alt="icon-memory" />
+              </div>
+              <p class="font-bold text-memoryText">Memory</p>
+            </div>
+            <div class="font-bold">
+              <p><span>92</span> / 100</p>
+            </div>
+          </div>
+          <!--end memory summary-->
+          <div
+            class="flex w-full bg-verbalBg rounded-xl my-4 p-3 justify-between"
+          >
+            <div class="flex">
+              <div class="pr-3">
+                <img src="assets/images/icon-verbal.svg" alt="icon-reaction" />
+              </div>
+              <p class="font-bold text-verbalText">Verbal</p>
+            </div>
+            <div class="font-bold">
+              <p><span>80</span> / 100</p>
+            </div>
+          </div>
+          <!-- end verbal summary -->
+          <div
+            class="flex w-full bg-visualBg rounded-xl my-4 p-3 justify-between"
+          >
+            <div class="flex">
+              <div class="pr-3">
+                <img src="assets/images/icon-visual.svg" alt="icon-visual" />
+              </div>
+              <p class="font-bold text-visualText">Visual</p>
             </div>
             <div class="font-bold">
               <p><span>80</span> / 100</p>
