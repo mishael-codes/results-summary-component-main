@@ -28,6 +28,11 @@
               // background colors
               slateBlue: "hsl(252, 100%, 67%)",
               royalBlue: "hsl(241, 81%, 54%)",
+              // text
+              fadedWhite: "hsla(0, 0%, 100%, .7)",
+              lightLavender: "hsla(241, 100%, 89%, .88)",
+              lighterLavender: "hsla(241, 100%, 89%, .6)",
+              paleBlue: "hsl(221, 100%, 96%)",
               // circle
               // circle bg
               violetBlue: "hsla(256, 72%, 46%, 1)",
@@ -44,6 +49,8 @@
               memoryBg: "hsl(39, 100%, 56%, .1)",
               verbalBg: "hsl(166, 100%, 37%, .1)",
               visualBg: "hsl(234, 85%, 45%, .1)",
+              // button bg color
+              buttonBg: "hsl(224, 30%, 27%)"
             },
           },
         },
@@ -63,29 +70,29 @@
     </style>
   </head>
   <body>
-    <main>
+    <main class="min-h-screen md:flex justify-center items-center">
       <div
-        class="w-full bg-gradient-to-b from-slateBlue to-royalBlue rounded-b-3xl text-center"
+        class="w-full md:w-72 md:h-96 bg-gradient-to-b from-slateBlue to-royalBlue rounded-b-3xl md:rounded-3xl text-center"
       >
-        <h1 class="p-4">Your Result</h1>
+        <h1 class="p-5 font-medium text-fadedWhite">Your Result</h1>
         <div
           class="w-32 h-32 flex flex-col m-auto justify-center rounded-full bg-gradient-to-b from-violetBlue to-persianBlue"
         >
           <span class="text-5xl text-white font-bold">76</span>
-          <span>of 100</span>
+          <span class="text-lighterLavender font-medium">of 100</span>
         </div>
-        <div>
-          <h2 class="p-2">Great</h2>
-          <p class="w-72 p-5 m-auto">
+        <div class="pb-3">
+          <h2 class="pt-3 font-medium text-white text-2xl">Great</h2>
+          <p class="w-72 p-2 pb-5 mb-5 m-auto text-lightLavender font-medium">
             You scored higher than 65% of the people who have taken these tests.
           </p>
         </div>
       </div>
-      <div class="p-4">
-        <h3 class="p-2 font-bold">Summary</h3>
+      <div class="pt-4 md:pt-0 md:pl-5 m-auto md:m-0 md:h-80 w-80">
+        <h3 class="p-2 font-bold text-lg text-buttonBg">Summary</h3>
         <div>
           <div
-            class="flex w-full bg-reactionBg rounded-xl my-4 p-3 justify-between"
+            class="flex w-full md:w-72 bg-reactionBg rounded-xl my-4 p-3 justify-between"
           >
             <div class="flex">
               <div class="pr-3">
@@ -102,7 +109,7 @@
           </div>
           <!--end reacion summary-->
           <div
-            class="flex w-full bg-memoryBg rounded-xl my-4 p-3 justify-between"
+            class="flex w-full md:w-72 bg-memoryBg rounded-xl my-4 p-3 justify-between"
           >
             <div class="flex">
               <div class="pr-3">
@@ -116,7 +123,7 @@
           </div>
           <!--end memory summary-->
           <div
-            class="flex w-full bg-verbalBg rounded-xl my-4 p-3 justify-between"
+            class="flex w-full md:w-72 bg-verbalBg rounded-xl my-4 p-3 justify-between"
           >
             <div class="flex">
               <div class="pr-3">
@@ -130,7 +137,7 @@
           </div>
           <!-- end verbal summary -->
           <div
-            class="flex w-full bg-visualBg rounded-xl my-4 p-3 justify-between"
+            class="flex w-full md:w-72 bg-visualBg rounded-xl my-4 p-3 justify-between"
           >
             <div class="flex">
               <div class="pr-3">
@@ -144,7 +151,7 @@
           </div>
         </div>
 
-        <button class="w-full py-3 rounded-full bg-red-800">Continue</button>
+        <button class="w-full md:w-72 py-3 rounded-full bg-buttonBg text-white font-bold">Continue</button>
       </div>
     </main>
 
