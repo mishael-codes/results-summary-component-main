@@ -50,7 +50,8 @@
               verbalBg: "hsl(166, 100%, 37%, .1)",
               visualBg: "hsl(234, 85%, 45%, .1)",
               // button bg color
-              buttonBg: "hsl(224, 30%, 27%)"
+              buttonBg: "hsl(224, 30%, 27%)",
+              fadedButtonBg: "hsl(224, 30%, 27%, .6)",
             },
           },
         },
@@ -72,7 +73,7 @@
   <body>
     <main class="min-h-screen md:flex justify-center items-center">
       <div
-        class="w-full md:w-72 md:h-96 bg-gradient-to-b from-slateBlue to-royalBlue rounded-b-3xl md:rounded-3xl text-center"
+        class="w-full md:w-72 md:h-96 bg-gradient-to-b from-slateBlue to-royalBlue rounded-b-3xl md:rounded-3xl text-center md:relative left-9"
       >
         <h1 class="p-5 font-medium text-fadedWhite">Your Result</h1>
         <div
@@ -83,13 +84,13 @@
         </div>
         <div class="pb-3">
           <h2 class="pt-3 font-medium text-white text-2xl">Great</h2>
-          <p class="w-72 p-2 pb-5 mb-5 m-auto text-lightLavender font-medium">
+          <p class="w-72 md:w-60 p-2 pb-5 mb-5 m-auto text-lightLavender font-medium">
             You scored higher than 65% of the people who have taken these tests.
           </p>
         </div>
       </div>
-      <div class="pt-4 md:pt-0 md:pl-5 m-auto md:m-0 md:h-80 w-80">
-        <h3 class="p-2 font-bold text-lg text-buttonBg">Summary</h3>
+      <div class="pt-4 md:pt-0 md:pl-14 m-auto md:m-0 md:h-96 w-96 md:bg-white md:shadow-xl md:shadow-paleBlue md:rounded-3xl">
+        <h3 class="p-2  font-bold text-lg text-buttonBg">Summary</h3>
         <div>
           <div
             class="flex w-full md:w-72 bg-reactionBg rounded-xl my-4 p-3 justify-between"
@@ -104,7 +105,7 @@
               <p class="font-bold text-reactionText">Reaction</p>
             </div>
             <div class="font-bold">
-              <p><span>80</span> / 100</p>
+              <p class="text-fadedButtonBg"><span class="text-buttonBg">80</span> / 100</p>
             </div>
           </div>
           <!--end reacion summary-->
@@ -118,7 +119,7 @@
               <p class="font-bold text-memoryText">Memory</p>
             </div>
             <div class="font-bold">
-              <p><span>92</span> / 100</p>
+              <p class="text-fadedButtonBg"><span class="text-buttonBg">92</span> / 100</p>
             </div>
           </div>
           <!--end memory summary-->
@@ -132,7 +133,7 @@
               <p class="font-bold text-verbalText">Verbal</p>
             </div>
             <div class="font-bold">
-              <p><span>80</span> / 100</p>
+              <p class="text-fadedButtonBg"><span class="text-buttonBg">61</span> / 100</p>
             </div>
           </div>
           <!-- end verbal summary -->
@@ -146,12 +147,12 @@
               <p class="font-bold text-visualText">Visual</p>
             </div>
             <div class="font-bold">
-              <p><span>80</span> / 100</p>
+              <p class="text-fadedButtonBg"><span class="text-buttonBg">72</span> / 100</p>
             </div>
           </div>
         </div>
 
-        <button class="w-full md:w-72 py-3 rounded-full bg-buttonBg text-white font-bold">Continue</button>
+        <button class="w-full md:w-72 py-3 rounded-full bg-buttonBg text-white font-bold hover:bg-gradient-to-b from-slateBlue to-royalBlue active:translate-y-1">Continue</button>
       </div>
     </main>
 
